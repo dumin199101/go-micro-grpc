@@ -9,7 +9,7 @@ GOPROXY=https://goproxy.io,direct
 go mod tidy
 ```
 
-#### 安装 micro v2 版本 v2.9.3
+#### 安装 micro v2 版本 v2.9.3  [可选]
 ```
 https://github.com/micro/micro/releases/tag/v2.9.3
 ```
@@ -74,13 +74,13 @@ protoc 参数说明
 ./client --registry=etcd --registry_address=127.0.0.1:2379    # 启用 etcd 服务发现和注册
 ```
 
-#### 服务管理状态 micro web
+#### 服务管理状态 micro web  [可选]
 > http://localhost:8082
 ```
 micro --registry=etcd --registry_address=127.0.0.1:2379 web
 ```
 
-#### go-plugins 插件下载 [可选]
+#### go-plugins consul 插件下载 [可选]
 > 注意：因为 go-micro v2 后，去除了对 consul 的支持，使用插件
 ```
 // consul 插件下载
@@ -90,8 +90,14 @@ go get github.com/micro/go-plugins/registry/consul/v2
 import _ "github.com/micro/go-plugins/registry/consul/v2"
 ```
 
-#### 启动服务端与客户端 [可选]
+#### go-plugins consul 启动服务端与客户端 [可选]
 ```
 --registry=consul --registry_address=127.0.0.1:8500    # 启用 consul 服务发现和注册
 --server_address=127.0.0.1:5501                        # 给服务端添加端口绑定
+```
+
+#### go-plugins hystrix 断路器插件下载 [可选]
+> 在客户端写入代码
+```
+go get github.com/micro/go-plugins/wrapper/breaker/hystrix/v2
 ```
