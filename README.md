@@ -33,17 +33,14 @@ go get github.com/micro/go-micro/v2
 
 #### 生成工具 - protoc 插件
 ```
-# protoc v3.15.5
+# protoc v3.11.4
 https://github.com/protocolbuffers/protobuf/releases
 
-# protoc-gen-go v1.25.0
-https://github.com/protocolbuffers/protobuf-go/releases
+# protoc-gen-go v1.4.3
+go get github.com/golang/protobuf/protoc-gen-go@v1.4.3
 
 # protoc-gen-micro v2.9.3
 go get github.com/micro/micro/v2/cmd/protoc-gen-micro
-
-# protoc-gen-go-grpc v1.1.0 [可选]
-https://github.com/grpc/grpc-go/releases
 ```
 
 #### proto 文件编译
